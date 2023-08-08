@@ -6,10 +6,13 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "format:file": "yarn prettier --write"
   },
   "devDependencies": {
     "prettier": "^3.0.0",
+    "stylelint": "^15.10.2",
+    "stylelint-config-standard": "^34.0.0",
     "typescript": "^5.0.2",
     "vite": "^4.4.5"
   }

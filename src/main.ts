@@ -1,21 +1,23 @@
-import './style.css'
+import './style.css';
 
 const Gameboard = (() => {
-    const gameBoard = [];
+    const _gameBoard = [];
 
     function display() {
-        const app = document.querySelector<HTMLDivElement>("#app");
-        const container = document.createElement("div");
-        container.classList.add("gameboard");
-        
+        const app = document.querySelector<HTMLDivElement>('#app');
+        const container = document.createElement('div');
+        container.classList.add('gameboard');
+
         if (!app) {
-            throw new Error("HTML node app not found");
+            throw new Error('HTML node app not found');
         }
 
         app.appendChild(container);
-
-
     }
 
-    return 
+    return {
+        display,
+    };
 })();
+
+Gameboard.display();

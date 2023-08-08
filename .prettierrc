@@ -2,7 +2,6 @@
     "semi": true,
     "tabWidth": 4,
     "singleQuote": true,
-    "parser": "typescript",
     "printWidth": 80,
     "bracketSpacing": true,
     "trailingComma": "es5"
