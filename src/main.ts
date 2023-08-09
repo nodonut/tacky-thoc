@@ -59,22 +59,23 @@ const Gameboard = (() => {
         app?.removeChild(board);
     }
 
+    function box(text: string): HTMLDivElement {
+        const container = document.createElement('div');
+        container.classList.add('box');
+
+        if (text) {
+            container.innerText += text;
+        }
+
+        return container;
+    }
+
     return {
         createBoard,
         resetBoard,
     };
 })();
-
-function box(text: string): HTMLDivElement {
-    const container = document.createElement('div');
-    container.classList.add('box');
-
-    if (text) {
-        container.innerText += text;
-    }
-
-    return container;
-}
+Gameboard.createBoard();
 
 const form = document.querySelector('form') as HTMLFormElement;
 form.onsubmit = () => {
@@ -88,8 +89,6 @@ form.onsubmit = () => {
 
     console.log(newPlayer);
 };
-
-Gameboard.createBoard();
 
 const resetButton = document.getElementById('reset') as HTMLButtonElement;
 if (!resetButton) {
